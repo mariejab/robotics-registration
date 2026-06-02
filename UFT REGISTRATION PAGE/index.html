@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Robotics Club Registration | College Student</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a0a2e 0%, #3c1e6e 50%, #2d1b4e 100%);
+            min-height: 100vh;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .reg-card {
+            max-width: 1000px;
+            width: 100%;
+            background: #f8f2ff;
+            border-radius: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(168, 85, 247, 0.2);
+            overflow: hidden;
+        }
+
+        .purple-header {
+            background: linear-gradient(105deg, #7c3aed, #a855f7, #c084fc);
+            padding: 1.5rem 2rem;
+            color: white;
+        }
+
+        .purple-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .purple-header p {
+            opacity: 0.92;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .form-body {
+            padding: 1.8rem 2rem 2rem;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .field label {
+            font-weight: 600;
+            color: #4c1d95;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+        }
+
+        input, select {
+            padding: 0.7rem 1rem;
+            border: 1.5px solid #e9d5ff;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+            background: white;
+            transition: all 0.2s;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: #a855f7;
+            box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2);
+        }
+
+        select[multiple] {
+            padding: 0.5rem;
+            min-height: 95px;
+            border-radius: 1rem;
+        }
+
+        .option-group {
+            background: #f3eaff;
+            padding: 0.6rem 0.8rem;
+            border-radius: 1rem;
+            border: 1px solid #e9d5ff;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .radio-option, .check-option {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            color: #2d1b4e;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-top: 1.8rem;
+            padding-top: 1rem;
+            border-top: 2px dashed #d9c6f0;
+        }
+
+        button {
+            border: none;
+            padding: 0.7rem 1.8rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-save {
+            background: #4c1d95;
+            color: white;
+        }
+
+        .btn-save:hover {
+            background: #3b0f70;
+            transform: translateY(-2px);
+        }
+
+        .toast-msg {
+            background: #e9d5ff;
+            border-left: 6px solid #8b5cf6;
+            padding: 0.8rem 1rem;
+            border-radius: 1rem;
+            margin-top: 1rem;
+            font-weight: 500;
+            display: none;
+            align-items: center;
+            gap: 10px;
+            color: #2e1065;
+            font-size: 0.85rem;
+            word-break: break-word;
+        }
+
+        .toast-msg.show {
+            display: flex;
+        }
+
+        .badge-note {
+            font-size: 0.7rem;
+            background: #ede9fe;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            color: #5b21b6;
+        }
+
+        @media (max-width: 650px) {
+            .form-body {
+                padding: 1.2rem;
+            }
+            .action-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="reg-card">
+    <div class="purple-header">
+        <h1>Robotics Club Registration</h1>
+        <p>College Student Information | Join the Robotics Team</p>
+    </div>
+
+    <div class="form-body">
+        <!-- 10 college student information fields -->
+        <div class="two-col">
+            <div class="field">
+                <label>Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name" value="">
+            </div>
+            <div class="field">
+                <label>Student ID</label>
+                <input type="text" id="studentId" placeholder="2600XXXXXXX" value="">
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="field">
+                <label>Email Address</label>
+                <input type="text" id="email" placeholder="your@gmail.com" value="">
+            </div>
+            <div class="field">
+                <label>Age</label>
+                <input type="number" id="age" placeholder="Enter your age" value="" step="1" min="17" max="35">
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="field">
+                <label>Major / Department</label>
+                <select id="major">
+                    <option value="">Select Major</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Mechatronics">Mechatronics</option>
+                    <option value="Applied Mathematics">Applied Mathematics</option>
+                    <option value="Physics">Physics</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>Year Level</label>
+                <select id="yearLevel">
+                    <option value="">Select Year</option>
+                    <option value="Freshman">Freshman</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Senior">Senior</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="field">
+                <label>Programming Languages</label>
+                <select id="programmingSkills" multiple size="4">
+                    <option value="Python">Python</option>
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                    <option value="C">C</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="MATLAB">MATLAB</option>
+                </select>
+                <small class="badge-note">Hold Ctrl/Cmd to select multiple</small>
+            </div>
+            <div class="field">
+                <label>Previous Robotics Experience</label>
+                <div class="option-group">
+                    <label class="radio-option">
+                        <input type="radio" name="experience" value="None"> None
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="experience" value="Beginner"> Beginner
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="experience" value="Intermediate"> Intermediate
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="experience" value="Advanced"> Advanced
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="two-col">
+            <div class="field">
+                <label>Available Days</label>
+                <div class="option-group">
+                    <label class="check-option">
+                        <input type="checkbox" id="monCheck" value="Monday"> Monday
+                    </label>
+                    <label class="check-option">
+                        <input type="checkbox" id="tueCheck" value="Tuesday"> Tuesday
+                    </label>
+                    <label class="check-option">
+                        <input type="checkbox" id="wedCheck" value="Wednesday"> Wednesday
+                    </label>
+                    <label class="check-option">
+                        <input type="checkbox" id="thuCheck" value="Thursday"> Thursday
+                    </label>
+                    <label class="check-option">
+                        <input type="checkbox" id="friCheck" value="Friday"> Friday
+                    </label>
+                    <label class="check-option">
+                        <input type="checkbox" id="weekendCheck" value="Weekend"> Weekend
+                    </label>
+                </div>
+            </div>
+            <div class="field">
+                <label>Why join Robotics Club?</label>
+                <input type="text" id="motivation" placeholder="e.g., Build competition robots" value="">
+            </div>
+        </div>
+
+        <!-- Action Buttons - only Save Test button now -->
+        <div class="action-buttons">
+            <button class="btn-save" id="saveTestBtn">Save Test</button>
+        </div>
+        <div id="toastMsg" class="toast-msg">
+            Registration data saved successfully
+        </div>
+    </div>
+</div>
+
+<script>
+    (function() {
+        function saveTestRegistration() {
+            // Collect all 10 college student information fields
+            const fullName = document.getElementById("fullName").value.trim();
+            const studentId = document.getElementById("studentId").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const age = document.getElementById("age").value;
+            const major = document.getElementById("major").value;
+            const yearLevel = document.getElementById("yearLevel").value;
+            
+            // Validate required fields
+            if (!fullName) {
+                showToastMessage("Please enter your Full Name", "warning");
+                return;
+            }
+            
+            // List box (programming skills)
+            const skillsSelect = document.getElementById("programmingSkills");
+            const selectedSkills = Array.from(skillsSelect.selectedOptions).map(opt => opt.value);
+            const skillsString = selectedSkills.length ? selectedSkills.join(", ") : "none";
+            
+            // Radio button (experience)
+            let experienceSelected = "none";
+            const radios = document.querySelectorAll('input[name="experience"]');
+            for (let radio of radios) {
+                if (radio.checked) {
+                    experienceSelected = radio.value;
+                    break;
+                }
+            }
+            
+            // Checkbox group (available days - Monday to Friday + Weekend)
+            const mon = document.getElementById("monCheck").checked;
+            const tue = document.getElementById("tueCheck").checked;
+            const wed = document.getElementById("wedCheck").checked;
+            const thu = document.getElementById("thuCheck").checked;
+            const fri = document.getElementById("friCheck").checked;
+            const weekend = document.getElementById("weekendCheck").checked;
+            const availableDays = [];
+            if (mon) availableDays.push("Monday");
+            if (tue) availableDays.push("Tuesday");
+            if (wed) availableDays.push("Wednesday");
+            if (thu) availableDays.push("Thursday");
+            if (fri) availableDays.push("Friday");
+            if (weekend) availableDays.push("Weekend");
+            const daysString = availableDays.length ? availableDays.join(", ") : "none";
+            
+            // Text field (motivation)
+            const motivation = document.getElementById("motivation").value.trim() || "[not set]";
+            
+            // Summary message
+            const summaryMsg = `Test Saved: ${fullName} (${studentId}) | ${major || "Not selected"} | Year: ${yearLevel || "Not selected"} | Age: ${age} | Skills: ${skillsString} | Experience: ${experienceSelected} | Available: ${daysString}`;
+            
+            showToastMessage(summaryMsg, "success");
+            
+            // Console log for detailed verification
+            console.group("College Student Registration - Test Snapshot");
+            console.log({
+                fullName: fullName,
+                studentId: studentId,
+                email: email,
+                age: age,
+                major: major || "Not selected",
+                yearLevel: yearLevel || "Not selected",
+                programmingSkills: selectedSkills,
+                previousExperience: experienceSelected,
+                availableDays: availableDays,
+                motivation: motivation
+            });
+            console.log("All required components: text, number, combo box, drop down, list box, check box, radio button");
+            console.groupEnd();
+        }
+        
+        function showToastMessage(message, type) {
+            const toastDiv = document.getElementById("toastMsg");
+            toastDiv.innerHTML = message;
+            toastDiv.classList.add("show");
+            
+            setTimeout(() => {
+                toastDiv.classList.remove("show");
+            }, 5000);
+        }
+        
+        const saveBtn = document.getElementById("saveTestBtn");
+        
+        saveBtn.addEventListener("click", () => {
+            saveTestRegistration();
+        });
+    })();
+</script>
+</body>
+</html>
