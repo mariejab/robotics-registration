@@ -15,68 +15,68 @@
         body {
             background: linear-gradient(135deg, #1a0a2e 0%, #3c1e6e 50%, #2d1b4e 100%);
             min-height: 100vh;
-            padding: 1.5rem;
+            padding: 2rem;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .reg-card {
-            max-width: 1000px;
+            max-width: 1100px;
             width: 100%;
             background: #f8f2ff;
-            border-radius: 2rem;
+            border-radius: 1.5rem;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(168, 85, 247, 0.2);
             overflow: hidden;
         }
 
         .purple-header {
             background: linear-gradient(105deg, #7c3aed, #a855f7, #c084fc);
-            padding: 1.5rem 2rem;
+            padding: 1.2rem 1.8rem;
             color: white;
         }
 
         .purple-header h1 {
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: 700;
             letter-spacing: -0.3px;
         }
 
         .purple-header p {
             opacity: 0.92;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
+            margin-top: 0.3rem;
+            font-size: 0.85rem;
         }
 
         .form-body {
-            padding: 1.8rem 2rem 2rem;
+            padding: 1.5rem 1.8rem;
         }
 
         .two-col {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.2rem;
-            margin-bottom: 1.2rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
 
         .field {
             display: flex;
             flex-direction: column;
-            gap: 0.4rem;
+            gap: 0.35rem;
         }
 
         .field label {
             font-weight: 600;
             color: #4c1d95;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             letter-spacing: 0.3px;
         }
 
         input, select {
-            padding: 0.7rem 1rem;
+            padding: 0.55rem 0.9rem;
             border: 1.5px solid #e9d5ff;
-            border-radius: 1rem;
-            font-size: 0.9rem;
+            border-radius: 0.8rem;
+            font-size: 0.85rem;
             background: white;
             transition: all 0.2s;
             outline: none;
@@ -89,26 +89,26 @@
 
         select[multiple] {
             padding: 0.5rem;
-            min-height: 95px;
-            border-radius: 1rem;
+            min-height: 85px;
+            border-radius: 0.8rem;
         }
 
         .option-group {
             background: #f3eaff;
-            padding: 0.6rem 0.8rem;
-            border-radius: 1rem;
+            padding: 0.5rem 0.7rem;
+            border-radius: 0.8rem;
             border: 1px solid #e9d5ff;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 0.8rem;
+            gap: 0.7rem;
         }
 
         .radio-option, .check-option {
             display: flex;
             align-items: center;
-            gap: 0.4rem;
-            font-size: 0.85rem;
+            gap: 0.35rem;
+            font-size: 0.8rem;
             color: #2d1b4e;
         }
 
@@ -117,43 +117,53 @@
             flex-wrap: wrap;
             justify-content: flex-end;
             gap: 1rem;
-            margin-top: 1.8rem;
+            margin-top: 1.5rem;
             padding-top: 1rem;
             border-top: 2px dashed #d9c6f0;
         }
 
         button {
             border: none;
-            padding: 0.7rem 1.8rem;
+            padding: 0.6rem 1.5rem;
             border-radius: 2rem;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             cursor: pointer;
             transition: all 0.2s ease;
         }
 
-        .btn-save {
+        .btn-register {
             background: #4c1d95;
             color: white;
         }
 
-        .btn-save:hover {
+        .btn-register:hover {
             background: #3b0f70;
+            transform: translateY(-2px);
+        }
+
+        .btn-test {
+            background: #7c3aed;
+            color: white;
+        }
+
+        .btn-test:hover {
+            background: #5b21b6;
             transform: translateY(-2px);
         }
 
         .toast-msg {
             background: #e9d5ff;
             border-left: 6px solid #8b5cf6;
-            padding: 0.8rem 1rem;
-            border-radius: 1rem;
+            padding: 0.7rem 1rem;
+            border-radius: 0.8rem;
             margin-top: 1rem;
             font-weight: 500;
             display: none;
             align-items: center;
             gap: 10px;
             color: #2e1065;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             word-break: break-word;
         }
 
@@ -162,19 +172,92 @@
         }
 
         .badge-note {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             background: #ede9fe;
-            padding: 0.2rem 0.6rem;
+            padding: 0.15rem 0.5rem;
             border-radius: 20px;
             color: #5b21b6;
         }
 
-        @media (max-width: 650px) {
-            .form-body {
-                padding: 1.2rem;
+        /* Output table section - directly under form */
+        .output-section {
+            padding: 0 1.8rem 1.5rem 1.8rem;
+        }
+
+        .output-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .output-header h3 {
+            color: #4c1d95;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .record-count {
+            background: #7c3aed;
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .output-table-container {
+            overflow-x: auto;
+            border-radius: 0.8rem;
+            border: 1px solid #e9d5ff;
+            background: white;
+        }
+
+        .output-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.75rem;
+        }
+
+        .output-table th {
+            background: #7c3aed;
+            color: white;
+            padding: 0.6rem 0.4rem;
+            font-weight: 600;
+            text-align: left;
+            border: 1px solid #9b4dff;
+            white-space: nowrap;
+        }
+
+        .output-table td {
+            padding: 0.5rem 0.4rem;
+            border: 1px solid #e9d5ff;
+            vertical-align: top;
+            color: #2d1b4e;
+            word-break: break-word;
+        }
+
+        .output-table tr:nth-child(even) {
+            background: #faf5ff;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 1rem;
             }
-            .action-buttons {
-                justify-content: center;
+            .form-body {
+                padding: 1rem;
+            }
+            .output-section {
+                padding: 0 1rem 1rem 1rem;
+            }
+            .two-col {
+                gap: 0.8rem;
+            }
+            .output-table th, .output-table td {
+                font-size: 0.7rem;
+                padding: 0.4rem 0.3rem;
             }
         }
     </style>
@@ -297,32 +380,120 @@
             </div>
         </div>
 
-        <!-- Action Buttons - only Save Test button now -->
+        <!-- Action Buttons -->
         <div class="action-buttons">
-            <button class="btn-save" id="saveTestBtn">Save Test</button>
+            <button class="btn-register" id="registerBtn">REGISTER</button>
+            <button class="btn-test" id="autoFillBtn">TEST AUTO-FILL</button>
         </div>
         <div id="toastMsg" class="toast-msg">
             Registration data saved successfully
+        </div>
+    </div>
+
+    <!-- OUTPUT TABLE SECTION - directly under the form -->
+    <div class="output-section">
+        <div class="output-header">
+            <h3>Saved Registrations</h3>
+            <span class="record-count" id="recordCount">0</span>
+        </div>
+        <div class="output-table-container">
+            <table class="output-table" id="outputTable">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Student ID</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Major</th>
+                        <th>Year Level</th>
+                        <th>Programming Skills</th>
+                        <th>Experience</th>
+                        <th>Available Days</th>
+                        <th>Motivation</th>
+                    </tr>
+                </thead>
+                <tbody id="outputTableBody">
+                    <tr><td colspan="10" style="text-align:center; color:#888;">No registrations yet. Click REGISTER or TEST AUTO-FILL.</td></tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
 
 <script>
     (function() {
-        function saveTestRegistration() {
-            // Collect all 10 college student information fields
+        // Array to store all registrations
+        let registrations = [];
+
+        // Predefined names list for random test
+        const namePool = [
+            "Noime Jabanag",
+            "Norenz Reomales",
+            "Neika Aumentado",
+            "Neo Rillera",
+            "Franz Anicas"
+        ];
+
+        // Helper function to display the output table
+        function displayOutputTable() {
+            const tbody = document.getElementById("outputTableBody");
+            const recordCountSpan = document.getElementById("recordCount");
+            recordCountSpan.innerText = registrations.length;
+
+            if (registrations.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="10" style="text-align:center; color:#888;">No registrations yet. Click REGISTER or TEST AUTO-FILL.</td></tr>';
+                return;
+            }
+
+            let html = '';
+            for (let i = 0; i < registrations.length; i++) {
+                const r = registrations[i];
+                html += `
+                    <tr>
+                        <td>${escapeHtml(r.fullName)}</td>
+                        <td>${escapeHtml(r.studentId)}</td>
+                        <td>${escapeHtml(r.email)}</td>
+                        <td>${escapeHtml(r.age)}</td>
+                        <td>${escapeHtml(r.major)}</td>
+                        <td>${escapeHtml(r.yearLevel)}</td>
+                        <td>${escapeHtml(r.programmingSkills)}</td>
+                        <td>${escapeHtml(r.experience)}</td>
+                        <td>${escapeHtml(r.availableDays)}</td>
+                        <td>${escapeHtml(r.motivation)}</td>
+                    </tr>
+                `;
+            }
+            tbody.innerHTML = html;
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
+
+        function showToastMessage(message, type) {
+            const toastDiv = document.getElementById("toastMsg");
+            toastDiv.innerHTML = message;
+            toastDiv.classList.add("show");
+            
+            setTimeout(() => {
+                toastDiv.classList.remove("show");
+            }, 5000);
+        }
+
+        // Get current form data as object
+        function getCurrentFormData() {
             const fullName = document.getElementById("fullName").value.trim();
             const studentId = document.getElementById("studentId").value.trim();
             const email = document.getElementById("email").value.trim();
             const age = document.getElementById("age").value;
             const major = document.getElementById("major").value;
             const yearLevel = document.getElementById("yearLevel").value;
-            
-            // Validate required fields
-            if (!fullName) {
-                showToastMessage("Please enter your Full Name", "warning");
-                return;
-            }
             
             // List box (programming skills)
             const skillsSelect = document.getElementById("programmingSkills");
@@ -339,7 +510,7 @@
                 }
             }
             
-            // Checkbox group (available days - Monday to Friday + Weekend)
+            // Checkbox group (available days)
             const mon = document.getElementById("monCheck").checked;
             const tue = document.getElementById("tueCheck").checked;
             const wed = document.getElementById("wedCheck").checked;
@@ -355,46 +526,155 @@
             if (weekend) availableDays.push("Weekend");
             const daysString = availableDays.length ? availableDays.join(", ") : "none";
             
-            // Text field (motivation)
             const motivation = document.getElementById("motivation").value.trim() || "[not set]";
             
-            // Summary message
-            const summaryMsg = `Test Saved: ${fullName} (${studentId}) | ${major || "Not selected"} | Year: ${yearLevel || "Not selected"} | Age: ${age} | Skills: ${skillsString} | Experience: ${experienceSelected} | Available: ${daysString}`;
-            
-            showToastMessage(summaryMsg, "success");
-            
-            // Console log for detailed verification
-            console.group("College Student Registration - Test Snapshot");
-            console.log({
-                fullName: fullName,
-                studentId: studentId,
-                email: email,
-                age: age,
+            return {
+                fullName: fullName || "(unnamed)",
+                studentId: studentId || "—",
+                email: email || "—",
+                age: age === "" ? "—" : age,
                 major: major || "Not selected",
                 yearLevel: yearLevel || "Not selected",
-                programmingSkills: selectedSkills,
-                previousExperience: experienceSelected,
-                availableDays: availableDays,
+                programmingSkills: skillsString,
+                experience: experienceSelected,
+                availableDays: daysString,
                 motivation: motivation
-            });
-            console.log("All required components: text, number, combo box, drop down, list box, check box, radio button");
+            };
+        }
+
+        // REGISTER function - saves current form data
+        function register() {
+            const fullName = document.getElementById("fullName").value.trim();
+            
+            if (!fullName) {
+                showToastMessage("Please enter your Full Name", "warning");
+                return;
+            }
+            
+            const formData = getCurrentFormData();
+            registrations.push(formData);
+            displayOutputTable();
+            
+            const summaryMsg = `Registered: ${formData.fullName} (${formData.studentId}) | ${formData.major} | Experience: ${formData.experience}`;
+            showToastMessage(summaryMsg, "success");
+            
+            console.group("Registration Saved");
+            console.log(formData);
+            console.groupEnd();
+        }
+
+        // TEST AUTO-FILL function - fills with random names from the pool and random data, then saves
+        function testAutoFill() {
+            const randStr = (len) => {
+                const letters = "abcdefghijklmnopqrstuvwxyz";
+                let res = "";
+                for (let i = 0; i < len; i++) res += letters[Math.floor(Math.random() * letters.length)];
+                return res;
+            };
+            
+            // Pick random name from the specified pool
+            const randomFull = namePool[Math.floor(Math.random() * namePool.length)];
+            document.getElementById("fullName").value = randomFull;
+            
+            // Generate Student ID
+            const studentIdRandom = "STU" + Math.floor(Math.random() * 9000 + 1000) + "-" + Math.floor(Math.random() * 900 + 100);
+            document.getElementById("studentId").value = studentIdRandom;
+            
+            // Generate email based on name
+            let emailName = randomFull.toLowerCase().replace(" ", ".");
+            document.getElementById("email").value = `${emailName}@university.edu`;
+            
+            // Random age (18-30)
+            const randomAge = Math.floor(Math.random() * (30 - 18 + 1)) + 18;
+            document.getElementById("age").value = randomAge;
+            
+            // Random Major
+            const majorSelect = document.getElementById("major");
+            const majorOptions = Array.from(majorSelect.options).filter(opt => opt.value !== "");
+            if (majorOptions.length) {
+                majorSelect.value = majorOptions[Math.floor(Math.random() * majorOptions.length)].value;
+            }
+            
+            // Random Year Level
+            const yearSelect = document.getElementById("yearLevel");
+            const yearOptions = Array.from(yearSelect.options).filter(opt => opt.value !== "");
+            if (yearOptions.length) {
+                yearSelect.value = yearOptions[Math.floor(Math.random() * yearOptions.length)].value;
+            }
+            
+            // Random Programming Skills (1 to 3 skills)
+            const skillSelect = document.getElementById("programmingSkills");
+            for (let opt of skillSelect.options) opt.selected = false;
+            const allSkillOptions = Array.from(skillSelect.options);
+            const howMany = Math.floor(Math.random() * 3) + 1;
+            const shuffled = [...allSkillOptions];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            for (let i = 0; i < Math.min(howMany, shuffled.length); i++) {
+                if (shuffled[i] && shuffled[i].value) shuffled[i].selected = true;
+            }
+            
+            // Random Radio (experience)
+            const radioOptions = document.querySelectorAll('input[name="experience"]');
+            if (radioOptions.length) {
+                const randomIndex = Math.floor(Math.random() * radioOptions.length);
+                radioOptions.forEach(r => r.checked = false);
+                radioOptions[randomIndex].checked = true;
+            }
+            
+            // Random Checkboxes (available days)
+            const checkboxes = [
+                document.getElementById("monCheck"),
+                document.getElementById("tueCheck"),
+                document.getElementById("wedCheck"),
+                document.getElementById("thuCheck"),
+                document.getElementById("friCheck"),
+                document.getElementById("weekendCheck")
+            ];
+            checkboxes.forEach(cb => { if (cb) cb.checked = false; });
+            const numDays = Math.floor(Math.random() * 5);
+            const shuffledChecks = [...checkboxes];
+            for (let i = shuffledChecks.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledChecks[i], shuffledChecks[j]] = [shuffledChecks[j], shuffledChecks[i]];
+            }
+            for (let i = 0; i < numDays && i < shuffledChecks.length; i++) {
+                if (shuffledChecks[i]) shuffledChecks[i].checked = true;
+            }
+            
+            // Random Motivation
+            const motivations = [
+                "Love building robots", "Want to join competition", "Learn ROS & embedded systems",
+                "Meet like-minded engineers", "Work on autonomous vehicles", "Develop mechatronics skills",
+                "Participate in hackathons", "Create AI for robotics", "Build drones", "3D printing & robotics"
+            ];
+            const randomMotivation = motivations[Math.floor(Math.random() * motivations.length)];
+            document.getElementById("motivation").value = randomMotivation;
+            
+            // Auto-save the registration
+            const formData = getCurrentFormData();
+            registrations.push(formData);
+            displayOutputTable();
+            
+            showToastMessage(`Test Auto-Fill: Registered "${randomFull}" with random data`, "success");
+            
+            console.group("Test Auto-Fill Executed");
+            console.log(formData);
             console.groupEnd();
         }
         
-        function showToastMessage(message, type) {
-            const toastDiv = document.getElementById("toastMsg");
-            toastDiv.innerHTML = message;
-            toastDiv.classList.add("show");
-            
-            setTimeout(() => {
-                toastDiv.classList.remove("show");
-            }, 5000);
-        }
+        // Event listeners
+        const registerBtn = document.getElementById("registerBtn");
+        const autoFillBtn = document.getElementById("autoFillBtn");
         
-        const saveBtn = document.getElementById("saveTestBtn");
+        registerBtn.addEventListener("click", () => {
+            register();
+        });
         
-        saveBtn.addEventListener("click", () => {
-            saveTestRegistration();
+        autoFillBtn.addEventListener("click", () => {
+            testAutoFill();
         });
     })();
 </script>
